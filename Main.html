@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="Main.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+    <header>
+        <div class="view video-container">
+            <video src="video/back.mp4" autoplay muted loop></video>
+            <div class="container">
+                <div class="row pt-5">
+                    <div class="mx-auto col-xl-5 mt-0 pt-0 mb-4">
+                        <div class="card" style="background-color: rgba(0, 0, 0, 0.292);">
+                            <div class="text-center" style="height: 80px;" >
+                                    <div class='button-box '>
+                                        <div id='btn'></div>
+                                        <button type='button'onclick='login()'class='toggle-btn'>Log In</button>
+                                        <button type='button'onclick='register()'class='toggle-btn'>Register</button>
+                                    </div>
+                                    <hr>
+                            </div>
+                            <form id='login' class="card-body">
+                                <div class="form-group">
+                                    <div class="user-box">
+                                        <input  type="text" name="name" required="">
+                                        <label >Username</label>
+                                    </div>
+                                    <div class="user-box">
+                                        <input  type="password" name="password" required="">
+                                        <label>Password</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" class="sign" id="Remember">
+                                        <label for="Remember" class="sign"> Remember Me</label>
+                                        <a href="#" class="Forgot-pass">Forgot Password?</a>
+                                    </div>
+                                    <a href="#" class="submit-button text-center mt-5 ml-3">
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        Login
+                                    </a>
+                                    <hr style="border: 1px solid gray;">
+                                    <div class="text-center mt-2">
+                                        <div class="text-white">
+                                            <p>or Connect with</p>
+                                        </div>
+                                    </div>
+                                    <footer>
+                                        <div class="card-footer text-center">
+                                        <button style="background: none; border: none; " type="button" class="btn-size btn btn-theme float-left " id="left"><img src="images/google.png" alt="Google"></button>
+                                        <button style="background: none; border: none; " type="button" class="btn-size btn btn-theme float-center " id="center"><img src="images/facebook.png" alt="Facebook"></button>
+                                        <button style="background: none; border: none;" type="button"class="btn-size btn btn-theme float-right" id="right"><img src="images/discord.png" alt="Discord"></button>
+                                        </div>
+                                    </footer>
+                                </div>
+                            </form>
+                            <form id='register' class="card-body">
+                                <div class="form-group">
+                                    <div class="user-box">
+                                        <input  type="text" name="name" required="">
+                                        <label >Username</label>
+                                    </div>
+                                    <div class="user-box">
+                                        <input  type="email" name="" required="">
+                                        <label >Email Id</label>
+                                    </div>
+                                    <div class="user-box">
+                                        <input  type="password" name="password" required="">
+                                        <label>Password</label>
+                                    </div>
+                                    <div class="user-box">
+                                        <input  type="password" name="password" required="">
+                                        <label>Repeat Password</label>
+                                    </div>
+                                    
+                                    <a href="#" class="submit-button text-center ">
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        Register
+                                    </a>
+                                    <hr style="border: 1px solid gray;">
+                                    <div class="text-center mt-2">
+                                        <div class="text-white">
+                                            <p>or Connect with</p>
+                                        </div>
+                                    </div>
+                                    <footer>
+                                        <div class="card-footer text-center">
+                                        <button style="background: none; border: none; " type="button" class="btn-size btn btn-theme float-left " id="left"><img src="images/google.png" alt="Google"></button>
+                                        <button style="background: none; border: none; " type="button" class="btn-size btn btn-theme float-center " id="center"><img src="images/facebook.png" alt="Facebook"></button>
+                                        <button style="background: none; border: none;" type="button"class="btn-size btn btn-theme float-right" id="right"><img src="images/discord.png" alt="Discord"></button>
+                                    </div>
+                                    </footer>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </header>
+        <script>
+        var x=document.getElementById('login');
+		var y=document.getElementById('register');
+		var z=document.getElementById('btn');
+		function register()
+		{
+			x.style.left='-1500px';
+			y.style.left='50px';
+			z.style.left='110px';
+            document.getElementById("login").style.display="none";
+            document.getElementById("register").style.display="block";
+		}
+		function login()
+		{
+			x.style.left='500px';
+			y.style.left='50px';
+			z.style.left='0px';
+            document.getElementById("register").style.display="none";
+            document.getElementById("login").style.display="block";
+		}
+
+        window.onload = function(){ 
+                document.getElementById("register").style.display="none";
+        }
+	</script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> 
+</body>
+</html>
